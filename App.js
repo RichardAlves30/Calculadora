@@ -8,6 +8,22 @@ export default function app(){
 	function somar(){
 		let resultado = parseFloat(valor1) + parseFloat(valor2);
 		setResultado(resultado);
+	} 
+	function menos(){
+		let resultado = parseFloat(valor1) - parseFloat(valor2);
+		setResultado(resultado);
+	}
+	function dividir(){
+		let resultado = parseFloat(valor1) / parseFloat(valor2);
+		setResultado(resultado);
+	}
+	function multiplicar(){
+		let resultado = parseFloat(valor1) * parseFloat(valor2);
+		setResultado(resultado);
+	}
+	function exponecial(){
+		let resultado = parseFloat(valor1) ** parseFloat(valor2);
+		setResultado(resultado);
 	}
 	return(
 	<View style={styles.container}>
@@ -30,12 +46,45 @@ export default function app(){
 				keyBoardType="numeric"
 				/>
 		</View>
+			
 		<View style={styles.bloco}>
 				<TouchableOpacity style={styles.botao}
 					onPress={somar}
 					>
 					<Text style={styles.textoBotao}>SOMAR</Text>
 				</TouchableOpacity>
+		</View>
+			
+		<View style={styles.bloco}>
+				<TouchableOpacity style={styles.botao}
+					onPress={menos}
+					>
+					<Text style={styles.textoBotao}>SUBTRAIR</Text>
+				</TouchableOpacity>
+		</View>
+		
+			<View style={styles.bloco}>
+				<TouchableOpacity style={styles.botao}
+					onPress={dividir}
+					>
+					<Text style={styles.textoBotao}>DIVIDIR</Text>
+				</TouchableOpacity>
+		</View>
+			
+			<View style={styles.bloco}>
+				<TouchableOpacity style={styles.botao}
+					onPress={multiplicar}
+					>
+					<Text style={styles.textoBotao}>MULTIPLICAÇÃO</Text>
+				</TouchableOpacity>
+				
+				<View style={styles.bloco}>
+				<TouchableOpacity style={styles.botao}
+					onPress={exponecial}
+					>
+					<Text style={styles.textoBotao}>EXPONENCIAÇÃO</Text>
+				</TouchableOpacity>
+		</View>
 		</View>
 		<View style={styles.bloco}>
 		<Text style={styles.titulo}>
